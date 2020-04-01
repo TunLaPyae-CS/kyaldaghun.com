@@ -1,0 +1,327 @@
+section {
+    display: block;
+    position: relative;
+    padding: 100px 0;
+    border-bottom:rgba(0,0,0,0.1) 1px solid;
+    background-color: #fff;
+
+    /*
+    -webkit-transition: all .400s;
+       -moz-transition: all .400s;
+         -o-transition: all .400s;
+            transition: all .400s;
+    */
+
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    background-size: cover !important;
+    box-sizing: border-box !important;
+}
+
+
+section:after,
+section:before {
+    content:" ";
+    display:table;
+}
+section:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* remove effect on parallax */
+section.parallax {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+/**
+	Static background image
+	add to HTML: background-image:url();
+**/
+section.static-bg,
+div.static-bg {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+
+section header.section-header {
+    margin-bottom:80px;
+}
+
+div.alternate,
+section.alternate {
+    background-color:rgba(0,0,0,0.02) !important;
+}
+/** Sliders
+ **************************************************************** **/
+section#slider {
+    display:block;
+    padding:0;
+    margin:0;
+    box-shadow:none;
+    background-color:#151515;
+    overflow:hidden !important;
+    border-bottom:0;
+    z-index:0;
+
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+}
+/* enable animation for mobile fullheight */
+section#slider.mobile-fullheight {
+    -webkit-transition: all .400s;
+    -moz-transition: all .400s;
+    -o-transition: all .400s;
+    transition: all .400s;
+}
+section#slider.transparent {
+    background-color:transparent;
+}
+section#slider.parallax-slider:before {
+    background-color: rgba(0,0,0,0.0);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section#slider .text-muted {
+    color: #fff !important;
+}
+
+section#slider .slider-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+section#slider .slider-video video {
+    position: absolute;
+    top:0; bottom: 0;
+    left:0; right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+section#slider canvas {
+    width:auto !important;
+    height:auto !important;
+}
+section#slider a:hover {
+    color:#fff;
+}
+
+/* slider form */
+section#slider:not(.custom-form) form .btn {
+    margin:0;
+}
+section#slider:not(.custom-form) input {
+    color:#fff;
+    background-color:rgba(0,0,0,0.7);
+    border-color:rgba(255,255,255,0.3);
+}
+section#slider:not(.custom-form) .input-group-addon:first-child {
+    color:#ccc;
+    background-color:rgba(0,0,0,0.7);
+    border-color:rgba(255,255,255,0.3);
+}
+section#slider:not(.custom-form) form.validate input.error {
+    color:#333;
+}
+section#slider:not(.custom-form) input:focus {
+    border-color:rgba(255,255,255,0.3);
+}
+section#slider:not(.custom-form) .btn-default {
+    background-color:rgba(0,0,0,0.2);
+    border-color:rgba(255,255,255,0.5);
+}
+
+
+#slider h1,
+.slider h1,
+#slider h2,
+.slider h2,
+#slider h3,
+.slider h3,
+#slider h4,
+.slider h4,
+#slider h5,
+.slider h5,
+#slider h6,
+.slider h6 {
+    color:#fff;
+}
+
+
+/* slider top links */
+#slider .slider-links,
+.slider .slider-links {
+    position:absolute;
+    z-index:100;
+    color:#fff;
+}
+#slider .slider-links li,
+.slider .slider-links li {
+    vertical-align:top;
+    text-align:left;
+    font-size:22px;
+    color:#ddd;
+    font-style:italic;
+}
+#slider .slider-links li a,
+.slider .slider-links li a {
+    color:#fff;
+    font-size:12px;
+    font-style:normal;
+    font-weight:bold;
+    border-left: 1px solid rgba(255,255,255,.15);
+    margin-left: 15px;
+    overflow: hidden;
+    padding: 6px 0;
+    padding-left: 15px;
+    text-transform: uppercase;
+    max-width:220px;
+    display:inline-block;
+    text-align:left;
+    max-height:62px;
+    text-shadow:none;
+
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+#slider .slider-links li:hover a,
+.slider .slider-links li:hover a {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+
+
+/* shadows - over image */
+#slider .top-shadow,
+.slider .top-shadow {
+    padding: 50px 30px;
+    min-height:150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index:80;
+
+    background-image: -moz-linear-gradient(to top,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -ms-linear-gradient(to top,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -o-linear-gradient(to top,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -webkit-linear-gradient(to top,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -webkit-gradient(linear, center top, center top, from(rgba(51,51,51,0)), to(rgba(51,51,51,0.6)));
+    background-image: linear-gradient(to top,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+}
+#slider .bottom-shadow,
+.slider .bottom-shadow {
+    padding: 50px 30px;
+    min-height:150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index:80;
+
+    background-image: -moz-linear-gradient(to bottom,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -ms-linear-gradient(to bottom,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -o-linear-gradient(to bottom,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -webkit-linear-gradient(to bottom,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(51,51,51,0)), to(rgba(51,51,51,0.6)));
+    background-image: linear-gradient(to bottom,rgba(51,51,51,0) 0, rgba(51,51,51,0.4) 50%, rgba(51,51,51,0.6) 100%);
+}
+
+
+/** Next | Prev
+	 ************************* **/
+.tparrows.round,
+.tp-leftarrow.round,
+.tp-rightarrow.round,
+.flex-prev,
+.flex-next,
+.camera_next,
+.camera_prev,
+.nivo-nextNav,
+.nivo-prevNav,
+.owl-prev,
+.owl-next,
+.swiper-button-next,
+.swiper-button-prev {
+    background-image:none !important;
+    border:0;
+    color:#ccc;
+    font-size:34px;
+    line-height:55px;
+    height:auto !important;
+    width:56px !important;
+    text-align:center;
+    background-color:rgba(0,0,0,0.2);
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    -webkit-transition: all .400s;
+    -moz-transition: all .400s;
+    -o-transition: all .400s;
+    transition: all .400s;
+}
+.tp-rightarrow.round,
+.flex-next,
+.owl-next,
+.camera_next,
+.nivo-nextNav,
+.swiper-button-next {
+    right:-3px;
+}
+.tp-leftarrow.round,
+.flex-prev,
+.owl-prev,
+.camera_prev,
+.nivo-prevNav,
+.swiper-button-prev {
+    left:-3px;
+}
+.tp-leftarrow.round:hover,
+.tp-rightarrow.round:hover,
+.flex-next:hover,
+.owl-prev:hover,
+.owl-next:hover,
+.flex-prev:hover,
+.camera_next:hover,
+.camera_prev:hover,
+.nivo-nextNav:hover,
+.nivo-prevNav:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color:#fff;
+    background-color:rgba(0,0,0,0.5);
+}
+
